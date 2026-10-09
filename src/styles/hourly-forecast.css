@@ -1,0 +1,33 @@
+.hourly-forecast{
+    margin: 30px 40px;
+}
+.hourly-forecast h2{
+    margin: 0 0 15px;
+
+    font-size: 20px;
+    color: #1677b8;
+}
+.hourly-forecast__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 15px 32px 15px 20px;
+  min-width: 110px;
+  background-color: #eaf6ff;
+  border-radius: 16px;
+}
+.hourly-forecast__item span,
+.hourly-forecast__item strong {
+  font-size: 16px;
+  color: #4d7894;
+}
+.hourly-forecast__item strong {
+  font-size: 20px;
+  color: #1677b8;
+  margin-right: 12px;
+}
+.hourly-forecast__items{
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+}

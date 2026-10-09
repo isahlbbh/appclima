@@ -1,0 +1,33 @@
+.daily-forecast {
+  margin: 30px 40px;
+}
+
+.daily-forecast h2 {
+  margin: 0 0 15px;
+
+  font-size: 20px;
+  color: #1677b8;
+}
+
+.daily-forecast__item {
+  display: grid;
+  grid-template-columns: 80px 50px 1fr;
+  align-items: center;
+
+  padding: 16px 20px;
+
+  border-bottom: 1px solid #c9e8fa;
+
+  font-size: 15px;
+  color: #4d7894;
+}
+
+.daily-forecast__item span:nth-child(2) {
+  font-size: 22px;
+}
+.daily-forecast__item span:last-child {
+  text-align: right;
+
+  font-weight: 600;
+  color: #1677b8;
+}

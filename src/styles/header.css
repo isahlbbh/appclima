@@ -1,0 +1,97 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 40px;
+
+  background-color: #eaf6ff;
+  border-bottom: 1px solid #c9e8fa;
+}
+
+.header__logo {
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+
+  color: #1677b8;
+}
+
+.header__cities,
+.header__temperature {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header__city-button,
+.header__unit-button {
+  padding: 8px 14px;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: transparent;
+
+  color: #4d7894;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.header__city-button:hover,
+.header__unit-button:hover {
+  background-color: #d4edfc;
+  color: #1677b8;
+}
+
+.header__city-button--active {
+  background-color: #72bce8;
+  color: #ffffff;
+}
+
+.header__unit-button--active{
+    background-color: #72bce8;
+    color: white;
+}
+.error-massage{
+  margin: 20px 40px;
+  padding: 14px 18px;
+
+  border-radius: 10px;
+
+  background-color: #fde8e8;
+  color: #b42318;
+
+  font-size: 14px;
+}
+.error-message p {
+  margin: 0 0 10px;
+}
+
+.error-message__button {
+  padding: 8px 14px;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: #b42318;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.error-message__button:hover {
+  background-color: #912018;
+}
