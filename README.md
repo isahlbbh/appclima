@@ -4,6 +4,8 @@ App de previsão do tempo feito com React e Vite. Mostra o clima atual, a previs
 
 🔗 **Veja o app funcionando:** [appclima-navy.vercel.app](https://appclima-navy.vercel.app)
 
+![Prévia do app Tempo](screenshots/app.png)
+
 ## Funcionalidades
 
 - Clima atual com temperatura, sensação térmica, máxima e mínima
