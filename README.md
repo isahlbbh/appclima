@@ -49,3 +49,28 @@ npm run dev
 ```
 
 4. Abra no navegador o endereço que aparecer no terminal (normalmente `http://localhost:5173`).
+
+## O que aprendi
+
+- Passar dados entre componentes com props e guardar informações com `useState`
+- Buscar dados de uma API com `fetch` e `useEffect`
+- Converter unidades (°C para °F) em uma função reaproveitável, separada dos componentes
+- Mostrar conteúdo diferente conforme a situação (carregando, erro ou dados prontos)
+- Tratar erros de rede e oferecer um botão para tentar de novo
+- Guardar preferências do usuário com `localStorage`
+- Organizar o projeto em pastas (`components`, `services`, `utils`, `styles`)
+- Usar Git e GitHub e publicar um app na Vercel
+
+## Melhorias futuras
+
+- Buscar qualquer cidade pelo nome, em vez de só três cidades fixas
+- Detectar a localização do usuário para mostrar o clima de onde ele está
+- Mostrar a previsão por hora de qualquer dia, e não só das próximas 6 horas
+- Adicionar um tema escuro
+- Criar testes automatizados para as funções de conversão
+
+## Autora
+
+Feito por **Isabelly Melo**.
+
+- GitHub: [@isahlbbh](https://github.com/isahlbbh)
