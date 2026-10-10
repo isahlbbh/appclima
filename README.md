@@ -17,6 +17,7 @@ App de previsão do tempo feito com React e Vite. Mostra o clima atual, a previs
 - Escolha entre Brasília, São Paulo e Recife
 - Lembra a cidade e a unidade escolhidas
 - Mensagem de erro com botão "Tentar novamente"
+- Layout responsivo, que se adapta a celular, tablet e computador
 
 ## Tecnologias
 
@@ -60,6 +61,10 @@ npm run dev
 - Guardar preferências do usuário com `localStorage`
 - Organizar o projeto em pastas (`components`, `services`, `utils`, `styles`)
 - Usar Git e GitHub e publicar um app na Vercel
+- Tornar o layout responsivo com media queries, aplicando ajustes só em telas pequenas
+- Usar `flex-wrap` para os itens descerem de linha quando falta espaço, em vez de vazarem da tela
+- Evitar que itens de uma lista com rolagem horizontal sejam espremidos, usando `flex-shrink: 0` e `overflow-x: auto`
+- Testar o layout em celular e tablet com o modo de dispositivos do DevTools
 
 ## Melhorias futuras
 
