@@ -95,3 +95,15 @@
 .error-message__button:hover {
   background-color: #912018;
 }
+
+@media (max-width: 600px) {
+  .header{
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+  .header__cities{
+  flex-wrap: wrap;
+}
+
+}

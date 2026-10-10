@@ -31,3 +31,8 @@
   font-weight: 600;
   color: #1677b8;
 }
+@media (max-width: 600px) {
+  .daily-forecast {
+    margin: 24px 20px;
+  }
+}

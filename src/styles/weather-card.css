@@ -79,3 +79,14 @@
   font-size: 13px;
   color: #7a98aa;
 }
+
+@media (max-width: 600px) {
+  .weather-card {
+    margin: 24px 20px;
+    padding: 24px;
+  }
+
+  .weather-card__temperature {
+    font-size: 72px;
+  }
+}
