@@ -14,6 +14,7 @@ App de previsão do tempo feito com React e Vite. Mostra o clima atual, a previs
 - Previsão das próximas 6 horas
 - Previsão dos próximos 7 dias
 - Nascer e pôr do sol de cada cidade
+- Ilustração que muda conforme o clima (ensolarado, nublado, chuva ou neve)
 - Escolha entre Brasília, São Paulo e Recife
 - Lembra a cidade e a unidade escolhidas
 - Mensagem de erro com botão "Tentar novamente"
@@ -65,6 +66,11 @@ npm run dev
 - Usar `flex-wrap` para os itens descerem de linha quando falta espaço, em vez de vazarem da tela
 - Evitar que itens de uma lista com rolagem horizontal sejam espremidos, usando `flex-shrink: 0` e `overflow-x: auto`
 - Testar o layout em celular e tablet com o modo de dispositivos do DevTools
+- Agrupar muitos códigos da API em poucas categorias com uma função separada (`getWeatherGroup`)
+- Importar imagens no Vite e escolher a imagem certa com uma tabela de consulta (objeto)
+- Mostrar uma imagem só quando os dados já chegaram, com renderização condicional (`&&`)
+- Controlar o formato de uma imagem com `aspect-ratio` e `object-fit`
+- Recuperar um projeto com `git clone` e `npm install` depois de perder os arquivos locais
 
 ## Melhorias futuras
 
