@@ -80,6 +80,17 @@
   color: #7a98aa;
 }
 
+.weather-card__image {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 3 / 2;
+  margin-top: 20px;
+
+  object-fit: cover;
+  border-radius: 16px;
+}
+
 @media (max-width: 600px) {
   .weather-card {
     margin: 24px 20px;
