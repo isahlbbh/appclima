@@ -5,6 +5,7 @@ import HourlyForecast from "./components/HourlyForecast";
 import DailyForecast from "./components/DailyForecast";
 import { getWeather } from "./services/weatherService";
 import { useEffect, useState } from "react";
+import SearchBar from "./components/SearchBar";
 
 const cities = [
   { name: "Brasília", latitude: -15.79, longitude: -47.88 },
@@ -72,6 +73,7 @@ export default function App() {
         unit={unit}
         onUnitChange={setUnit}
       />
+      <SearchBar onSelect={setCity} />
       {error && (
         <div className="error-message">
           <p>
