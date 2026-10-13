@@ -6,14 +6,34 @@ import DailyForecast from "./components/DailyForecast";
 import { getWeather } from "./services/weatherService";
 import { useEffect, useState } from "react";
 
-const cities = ["Brasília", "São Paulo", "Recife"];
+const cities = [
+  { name: "Brasília", latitude: -15.79, longitude: -47.88 },
+  { name: "São Paulo", latitude: -23.55, longitude: -46.63 },
+  { name: "Recife", latitude: -8.05, longitude: -34.88 },
+];
+
+function getSavedCity() {
+  try {
+    const savedCity = JSON.parse(localStorage.getItem("city"));
+
+    if (
+      savedCity &&
+      savedCity.name &&
+      typeof savedCity.latitude === "number" &&
+      typeof savedCity.longitude === "number"
+    ) {
+      return savedCity;
+    }
+  } catch {
+    // valor antigo ou inválido: usa a cidade padrão
+  }
+
+  return cities[0];
+}
 
 export default function App() {
   const [weather, setWeather] = useState(null);
-  const [city, setCity] = useState(() => {
-    const savedCity = localStorage.getItem("city");
-    return cities.includes(savedCity) ? savedCity : "Brasília";
-  });
+  const [city, setCity] = useState(getSavedCity);
 
   const [unit, setUnit] = useState(() => {
     const savedUnit = localStorage.getItem("unit");
@@ -37,7 +57,7 @@ export default function App() {
   }, [city, attempt]);
 
   useEffect(() => {
-    localStorage.setItem("city", city);
+    localStorage.setItem("city", JSON.stringify(city));
   }, [city]);
 
   useEffect(() => {
@@ -47,8 +67,8 @@ export default function App() {
   return (
     <div>
       <Header
-        city={city}
-        onCityChange={setCity}
+        city={city.name}
+        onCityChange={(name) => setCity(cities.find((c) => c.name === name))}
         unit={unit}
         onUnitChange={setUnit}
       />
@@ -67,7 +87,7 @@ export default function App() {
           </button>
         </div>
       )}
-      <WeatherCard weather={weather} unit={unit} city={city} />
+      <WeatherCard weather={weather} unit={unit} city={city.name} />
       <WeatherInfo weather={weather} />
       <HourlyForecast weather={weather} unit={unit} />
       <DailyForecast weather={weather} unit={unit} />
