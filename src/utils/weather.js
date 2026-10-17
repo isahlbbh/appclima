@@ -1,9 +1,8 @@
 export function getCurrentHourIndex (weather) {
     if (!weather) return -1
 
-    const currentHour = new Date().getHours().toString().padStart(2, '0')
+    const currentHour = weather.current.time.slice(0, 13)
 
     return weather.hourly.time.findIndex((time) => {
-        return time.slice(11, 13) === currentHour
-    })
+        return time.slice(0, 13) === currentHour    })
 }
