@@ -1,6 +1,6 @@
 # Tempo
 
-App de previsão do tempo feito com React e Vite. Mostra o clima atual, a previsão das próximas horas e dos próximos 7 dias para Brasília, São Paulo e Recife, com troca entre °C e °F.
+App de previsão do tempo feito com React e Vite. Mostra o clima atual, a previsão das próximas horas e dos próximos 7 dias para qualquer cidade do mundo, com troca entre °C e °F.
 
 🔗 **Veja o app funcionando:** [appclima-navy.vercel.app](https://appclima-navy.vercel.app)
 
@@ -15,7 +15,9 @@ App de previsão do tempo feito com React e Vite. Mostra o clima atual, a previs
 - Previsão dos próximos 7 dias
 - Nascer e pôr do sol de cada cidade
 - Ilustração que muda conforme o clima (ensolarado, nublado, chuva ou neve)
-- Escolha entre Brasília, São Paulo e Recife
+- Busca de qualquer cidade do mundo, com atalhos para Brasília, São Paulo e Recife
+- Avisos na busca quando o texto é curto, nenhuma cidade é encontrada ou a internet falha
+- Horários sempre no fuso da cidade pesquisada
 - Lembra a cidade e a unidade escolhidas
 - Mensagem de erro com botão "Tentar novamente"
 - Layout responsivo, que se adapta a celular, tablet e computador
@@ -26,7 +28,7 @@ App de previsão do tempo feito com React e Vite. Mostra o clima atual, a previs
 - Vite
 - JavaScript
 - CSS
-- [Open-Meteo API](https://open-meteo.com/) para os dados do clima
+- [Open-Meteo API](https://open-meteo.com/) para os dados do clima e a busca de cidades
 - Vercel para a publicação
 
 ## Como rodar o projeto
@@ -74,7 +76,7 @@ npm run dev
 
 ## Melhorias futuras
 
-- Buscar qualquer cidade pelo nome, em vez de só três cidades fixas
+- Sugerir cidades enquanto a pessoa digita, sem precisar clicar em Buscar
 - Detectar a localização do usuário para mostrar o clima de onde ele está
 - Mostrar a previsão por hora de qualquer dia, e não só das próximas 6 horas
 - Adicionar um tema escuro
