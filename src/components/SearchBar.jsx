@@ -4,15 +4,31 @@ import { searchCities } from "../services/weatherService";
 export default function SearchBar({ onSelect }) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
+  const [message, setMessage] = useState("");
 
   async function handleSubmit(event) {
     event.preventDefault();
 
     const name = query.trim();
-    if (name.length < 2) return;
+    if (name.length < 2) {
+      setResults([]);
+      setMessage("Digite pelo menos 2 letras.");
+      return;
+    }
 
-    const found = await searchCities(name);
-    setResults(found);
+    setMessage("");
+
+    try {
+      const found = await searchCities(name);
+      setResults(found);
+
+      if (found.length === 0) {
+        setMessage("Nenhuma cidade encontrada.");
+      }
+    } catch {
+      setResults([]);
+      setMessage("Não foi possível buscar agora. Tente de novo.");
+    }
   }
 
   function handleSelect(place) {
@@ -23,6 +39,7 @@ export default function SearchBar({ onSelect }) {
     });
     setQuery("");
     setResults([]);
+    setMessage("");
   }
 
   return (
@@ -39,7 +56,7 @@ export default function SearchBar({ onSelect }) {
           Buscar
         </button>
       </form>
-
+      {message && <p className="search__message">{message}</p>}
       {results.length > 0 && (
         <ul className="search__results">
           {results.map((place) => (
